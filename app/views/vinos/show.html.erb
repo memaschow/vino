@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vino.name %>
+</p>
+
+<p>
+  <strong>Discription:</strong>
+  <%= @vino.discription %>
+</p>
+
+<%= link_to 'Edit', edit_vino_path(@vino) %> |
+<%= link_to 'Back', vinos_path %>

@@ -1,0 +1,29 @@
+<h1>Listing vinos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Discription</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vinos.each do |vino| %>
+      <tr>
+        <td><%= vino.name %></td>
+        <td><%= vino.discription %></td>
+        <td><%= link_to 'Show', vino %></td>
+        <td><%= link_to 'Edit', edit_vino_path(vino) %></td>
+        <td><%= link_to 'Destroy', vino, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vino', new_vino_path %>
